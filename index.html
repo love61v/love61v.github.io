@@ -441,16 +441,14 @@
 
       
         
-          
-            <h3 id="maven插件pox-xml配置"><a href="#maven插件pox-xml配置" class="headerlink" title="maven插件pox.xml配置"></a>maven插件pox.xml配置</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">mysql.version</span>&gt;</span>5.1.18<span class="tag">&lt;/<span class="name">mysql.version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!--mysql依赖包--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;mysql.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- mybatis maven插件 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis.generator<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-generator-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.3.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;mysql.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">                <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">verbose</span>&gt;</span>true<span class="tag">&lt;/<span class="name">verbose</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">overwrite</span>&gt;</span>true<span class="tag">&lt;/<span class="name">overwrite</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="generator配置文件"><a href="#generator配置文件" class="headerlink" title="generator配置文件"></a>generator配置文件</h3><p>src/main/resources下generatorConfig.xml<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</div><div class="line"><span class="meta">&lt;!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"</span></div><div class="line">  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd"&gt;</div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 最后一行table元素中修改自己的要生成的表名及实体名称 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">generatorConfiguration</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">context</span> <span class="attr">id</span>=<span class="string">"call"</span> <span class="attr">targetRuntime</span>=<span class="string">"MyBatis3"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">commentGenerator</span>&gt;</span></div><div class="line">        <span class="comment">&lt;!-- 关闭自动生成的注释 --&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"suppressAllComments"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">commentGenerator</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- 数据库连接信息 修改成你的配置--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">jdbcConnection</span> <span class="attr">driverClass</span>=<span class="string">"com.mysql.jdbc.Driver"</span></span></div><div class="line">        <span class="attr">connectionURL</span>=<span class="string">"jdbc:mysql://localhost/yourDB"</span></div><div class="line">        <span class="attr">userId</span>=<span class="string">"root"</span> <span class="attr">password</span>=<span class="string">"123456"</span>&gt;</div><div class="line">    <span class="tag">&lt;/<span class="name">jdbcConnection</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- model实体类  targetPackage是你工程的放实体包名 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">javaModelGenerator</span> <span class="attr">targetPackage</span>=<span class="string">"com.bm.insurance.cloud.sale.model"</span> <span class="attr">targetProject</span>=<span class="string">"src/main/java"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"enableSubPackages"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"trimStrings"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">javaModelGenerator</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- sql xml --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">sqlMapGenerator</span> <span class="attr">targetPackage</span>=<span class="string">"mybatis"</span> <span class="attr">targetProject</span>=<span class="string">"src/main/resources"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"enableSubPackages"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">sqlMapGenerator</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- dao targetPackage是你工程的放dao包名--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">javaClientGenerator</span> <span class="attr">type</span>=<span class="string">"XMLMAPPER"</span></span></div><div class="line">        <span class="attr">targetPackage</span>=<span class="string">"com.bm.insurance.cloud.sale.dao"</span> <span class="attr">targetProject</span>=<span class="string">"src/main/java"</span>&gt;</div><div class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"enableSubPackages"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">javaClientGenerator</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- 数据库表名tableName, 生成的实体名 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">table</span> <span class="attr">tableName</span>=<span class="string">"red_package_activity"</span> <span class="attr">domainObjectName</span>=<span class="string">"RedPackageActivity"</span></span></div><div class="line">        <span class="attr">enableDeleteByExample</span>=<span class="string">"false"</span> <span class="attr">enableDeleteByPrimaryKey</span>=<span class="string">"false"</span>&gt;<span class="tag">&lt;/<span class="name">table</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">context</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">generatorConfiguration</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h3 id="eclipse下生成-用idea的你懂的"><a href="#eclipse下生成-用idea的你懂的" class="headerlink" title="eclipse下生成(用idea的你懂的 ^_^)"></a>eclipse下生成(用idea的你懂的 ^_^)</h3><ul>
-<li>1.选择pom.xml文件，击右键先择Run AS——Maven Build…</li>
-<li>2.在Goals框中输入命令：<strong>mybatis-generator:generate</strong></li>
-<li>3.Run就好了,在工程上刷新</li>
-</ul>
-
-          
+          <h3 id="maven插件pox-xml配置"><a href="#maven插件pox-xml配置" class="headerlink" title="maven插件pox.xml配置"></a>maven插件pox.xml配置</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">mysql.version</span>&gt;</span>5.1.18<span class="tag">&lt;/<span class="name">mysql.version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!--mysql依赖包--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;mysql.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- mybatis maven插件 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis.generator<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-generator-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.3.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;mysql.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">                <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">verbose</span>&gt;</span>true<span class="tag">&lt;/<span class="name">verbose</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">overwrite</span>&gt;</span>true<span class="tag">&lt;/<span class="name">overwrite</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></div></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/missdan/2017/07/14/maven生成表实体及dao/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -612,13 +610,17 @@
 
       
         
-          
-            <p>+spring loaded修改类方法什么的，不用重启实现热部署,虽然idea有jrebel<br>+用spring-boot时也可用到devtools,springloaded,jrebel热部署等等，记录一下</p>
-<h3 id="下载jar包"><a href="#下载jar包" class="headerlink" title="下载jar包"></a>下载jar包</h3><p><a href="http://central.maven.org/maven2/org/springframework/springloaded/1.2.7.RELEASE/springloaded-1.2.7.RELEASE.jar" target="_blank" rel="external">点我下载springloaded-1.2.7jar包</a></p>
-<h3 id="配置参数见图"><a href="#配置参数见图" class="headerlink" title="配置参数见图"></a>配置参数见图</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-javaagent:c:\tools\springloaded-1.2.7.RELEASE.jar -noverify</div></pre></td></tr></table></figure>
-<p><img src="/missdan/2017/07/14/springloaded热部署/Q1.png" alt="tomcat配置"></p>
-
-          
+          <blockquote>
+<p>spring loaded修改类方法什么的，不用重启实现热部署,虽然idea有jrebel<br> 用spring-boot时也可用到devtools,springloaded,jrebel热部署等等，记录一下</p>
+<h3 id="下载jar包"><a href="#下载jar包" class="headerlink" title="下载jar包"></a>下载jar包</h3></blockquote>
+<p><a href="http://central.maven.org/maven2/org/springframework/springloaded/1.2.7.RELEASE/springloaded-1.2.7.RELEASE.jar" target="_blank" rel="external">点我下载springloaded-1.2.7jar包</a><br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/missdan/2017/07/14/springloaded热部署/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -923,7 +925,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  483
+                  481
                 </span>
               
 
@@ -958,45 +960,21 @@
 
       
         
-          
-            <!--音乐-->
+          <!--音乐-->
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=19089615&auto=0&height=66"></iframe>
 
 <p>命令太多，记不住，组合起来用一把…..<br>示例文件:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">[root@lovedan test]# cat a.txt</div><div class="line">hello</div><div class="line">good</div><div class="line">world</div><div class="line">hello</div><div class="line">hello</div><div class="line">good</div><div class="line">dandan</div><div class="line">good</div><div class="line">hello</div><div class="line">world</div></pre></td></tr></table></figure></p>
 <h3 id="分析-统计a-txt出现次数前3名的单词"><a href="#分析-统计a-txt出现次数前3名的单词" class="headerlink" title="分析: 统计a.txt出现次数前3名的单词"></a>分析: 统计a.txt出现次数前3名的单词</h3><ul>
 <li>出现次数用<strong>awk</strong>统计</li>
 <li>排名用<strong>sort</strong>命令排序</li>
-<li>取文件前N行用<strong>head</strong>命令</li>
-</ul>
-<h3 id="awk命令"><a href="#awk命令" class="headerlink" title="awk命令"></a>awk命令</h3><p>awk是以文件的一行为处理单位的,awk每接收文件的一行，然后执行相应的命令处理文本<br><a href="//www.runoob.com/linux/linux-comm-awk.html" target="_blank">awk玩法请参考文档</a><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@lovedan test]# awk '&#123;sum[$1]+=1&#125; END &#123;for(k in sum) print k ":" sum[k]&#125;' a.txt</div><div class="line">hello:4</div><div class="line">dandan:1</div><div class="line">good:3</div><div class="line">world:2</div></pre></td></tr></table></figure></p>
-<p>注: 如上结果,每读取一行，得取到那个单词，这是$1,有其它的分隔符则-F等，取具体的$n,<br>    以上用sum数组存储，key是自每行的单词,每读取一行加1，END是最终执行，循环打印内容<br>    单词由次数显示出来，则只要按冒号后的数字倒序排序即可<br>ok,单词及次数已整理出来，只要排序就妥了，<strong>sort</strong>命令走起</p>
-<hr>
-<h3 id="sort命令"><a href="#sort命令" class="headerlink" title="sort命令"></a>sort命令</h3><blockquote>
-<ul>
-<li><strong>格式</strong>  sort 【参数】【文件】</li>
-<li><strong>参数</strong>  -n    以数字排序</li>
-<li><strong>参数</strong>  -r    倒序</li>
-<li><strong>参数</strong>  -t    第几区间【分隔后分隔后的第几列】</li>
-<li><strong>参数</strong>  -k    以第几区间【分隔后分隔后的第几列】来排序</li>
-<li><strong>eg:</strong>  sort -n -r -k 2 -t ‘:’ xx.txt  -n数字排序方式， -r倒序, -t ‘:’以冒号分隔, -k 2表示以冒号分隔后的第2例</li>
-<li><strong>结果示例</strong><pre><code><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@lovedan test]# awk '&#123;sum[$1]+=1&#125; END &#123;for(k in sum) print k ":" sum[k]&#125;' a.txt | sort -n -r -k 2 -t ':'</div><div class="line">hello:4</div><div class="line">good:3</div><div class="line">world:2</div><div class="line">dandan:1</div></pre></td></tr></table></figure>
-</code></pre></li>
-</ul>
-</blockquote>
-<p>ok,排序了后，只用取前多少行就妥了，<strong>head</strong>命令走起</p>
-<h3 id="head命令"><a href="#head命令" class="headerlink" title="head命令"></a>head命令</h3><blockquote>
-<ul>
-<li><strong>格式</strong>  head 【参数】【文件】</li>
-<li><strong>参数</strong>  -n&lt;行数&gt; 显示的行数</li>
-<li><strong>显示前10行</strong>   head -10 xx.txt</li>
-<li><strong>结果示例</strong><pre><code><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[root@lovedan test]# head -n 3 a.txt</div><div class="line">hello</div><div class="line">good</div><div class="line">world</div></pre></td></tr></table></figure>
-</code></pre></li>
-</ul>
-</blockquote>
-<hr>
-<h3 id="最终结果"><a href="#最终结果" class="headerlink" title="最终结果"></a>最终结果</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[root@lovedan test]# awk '&#123;sum[$1]+=1&#125; END &#123;for(k in sum) print k ":" sum[k]&#125;' a.txt | sort -n -r -k 2 -t ':' | head -n 3</div><div class="line">hello:4</div><div class="line">good:3</div><div class="line">world:2</div></pre></td></tr></table></figure>
-
-          
+<li>取文件前N行用<strong>head</strong>命令</li></ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/missdan/2017/07/12/awk统计排名单词出现次数/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1158,10 +1136,14 @@
 
       
         
-          
-            <p>今天超级big big大福利<br><img src="/missdan/2017/07/11/cool-girl/1.jpg" alt=""><br><img src="/missdan/2017/07/11/cool-girl/2.jpg" alt=""><br><img src="/missdan/2017/07/11/cool-girl/3.jpg" alt=""></p>
-
-          
+          <p>今天超级big big大福利<br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/missdan/2017/07/11/cool-girl/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1323,23 +1305,18 @@
 
       
         
-          
-            <!--音乐-->
+          <!--音乐-->
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="340" height="86" src="//music.163.com/outchain/player?type=2&id=25706282&auto=0&height=66"><br></iframe>
 
 <p>   认识一朵奇葩，她说是“传奇”，不管你信不信，反正我不信。</p>
-<p>   她说去幼儿园没有人接送上下学，一个人回家途中遇意外，额头被玻璃划伤一脸血，哇哇大哭不知所措，幸得好心人处理，结果有惊无险，不知黑暗的夜色是否有她期望的繁星。</p>
-<p>   她说念小学成绩巨差，被小伙伴鄙视，被老师扔到最后一排学渣区，上课出小差偶尔睡觉，吃着辣条，远望窗外，然而成绩依然稀烂，不知道那时体育课上是否有她跳橡皮筋的倩影。</p>
-<p>   她说读初中桃花运指数爆棚，班草追她，前面的男生逗她，后排的汉子扯她的头发，还有别的男生做护花使者，长得好看的才有青葱岁月，不知一杯香飘飘是否温暖过特立独行的她。</p>
-<p>   她说她断片了。</p>
-<p>   她说混社会，连轴工作三天不睡，熊猫眼，躺尸，一觉醒来天都黑了，有一口就吃，没一口就不吃，兜兜转转，独在异乡，打过黑车，逃过劫难，累病了不知是怎么抗住的，拿到诊断结果内心又是什么在支撑着？</p>
-<p>   她说她醒了，回到老家工作了，状态也好了，参加素质培训学习职业规划，学钢琴学绘画内外兼修，目标计划也都实现了，腰包也鼓起来了。</p>
-<p>   她说要创业要自己主宰命运，她说要走遍世界，她说要过自己的生活，她说不作死就不会死。</p>
-<p>   她说……</p>
-<p>   她说，你听着就够了。她笑，你笑着就好了。她熬夜，你陪着就行了。她教育你，你领会就对了。她作，你给99分就得了。若无相欠，怎会相见。或许人生写到结尾，结局平淡无趣，但因为平凡太久，就易为小事而满足。</p>
-<p>   无论你遇见谁，她都是你生命中应该出现的人，都有原因都有使命，绝非偶然，她一定会教会你什么。</p>
-
-          
+<p>   她说去幼儿园没有人接送上下学，一个人回家途中遇意外，额头被玻璃划伤一脸血，</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/missdan/2017/07/10/missdan/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

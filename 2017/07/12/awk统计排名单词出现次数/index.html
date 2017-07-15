@@ -100,17 +100,17 @@
 
 
 
-<meta name="description" content="命令太多，记不住，组合起来用一把…..示例文件:1234567891011[root@lovedan test]# cat a.txthellogoodworldhellohellogooddandangoodhelloworld 分析: 统计a.txt出现次数前3名的单词 出现次数用awk统计 排名用sort命令排序 取文件前N行用head命令  awk命令awk是以文件的一行为处理单位的">
+<meta name="description" content="命令太多，记不住，组合起来用一把…..示例文件:1234567891011[root@lovedan test]# cat a.txthellogoodworldhellohellogooddandangoodhelloworld 分析: 统计a.txt出现次数前3名的单词 出现次数用awk统计 排名用sort命令排序 取文件前N行用head命令">
 <meta name="keywords" content="linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="awk统计排名单词出现次数">
 <meta property="og:url" content="https://love61v.github.io/missdan/2017/07/12/awk统计排名单词出现次数/index.html">
 <meta property="og:site_name" content="小仙丹">
-<meta property="og:description" content="命令太多，记不住，组合起来用一把…..示例文件:1234567891011[root@lovedan test]# cat a.txthellogoodworldhellohellogooddandangoodhelloworld 分析: 统计a.txt出现次数前3名的单词 出现次数用awk统计 排名用sort命令排序 取文件前N行用head命令  awk命令awk是以文件的一行为处理单位的">
-<meta property="og:updated_time" content="2017-07-14T02:25:42.802Z">
+<meta property="og:description" content="命令太多，记不住，组合起来用一把…..示例文件:1234567891011[root@lovedan test]# cat a.txthellogoodworldhellohellogooddandangoodhelloworld 分析: 统计a.txt出现次数前3名的单词 出现次数用awk统计 排名用sort命令排序 取文件前N行用head命令">
+<meta property="og:updated_time" content="2017-07-14T11:54:48.022Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="awk统计排名单词出现次数">
-<meta name="twitter:description" content="命令太多，记不住，组合起来用一把…..示例文件:1234567891011[root@lovedan test]# cat a.txthellogoodworldhellohellogooddandangoodhelloworld 分析: 统计a.txt出现次数前3名的单词 出现次数用awk统计 排名用sort命令排序 取文件前N行用head命令  awk命令awk是以文件的一行为处理单位的">
+<meta name="twitter:description" content="命令太多，记不住，组合起来用一把…..示例文件:1234567891011[root@lovedan test]# cat a.txthellogoodworldhellohellogooddandangoodhelloworld 分析: 统计a.txt出现次数前3名的单词 出现次数用awk统计 排名用sort命令排序 取文件前N行用head命令">
 
 
 
@@ -404,7 +404,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  483
+                  481
                 </span>
               
 
@@ -445,9 +445,10 @@
 <h3 id="分析-统计a-txt出现次数前3名的单词"><a href="#分析-统计a-txt出现次数前3名的单词" class="headerlink" title="分析: 统计a.txt出现次数前3名的单词"></a>分析: 统计a.txt出现次数前3名的单词</h3><ul>
 <li>出现次数用<strong>awk</strong>统计</li>
 <li>排名用<strong>sort</strong>命令排序</li>
-<li>取文件前N行用<strong>head</strong>命令</li>
+<li>取文件前N行用<strong>head</strong>命令<a id="more"></a>
+<h3 id="awk命令"><a href="#awk命令" class="headerlink" title="awk命令"></a>awk命令</h3>awk是以文件的一行为处理单位的,awk每接收文件的一行，然后执行相应的命令处理文本<br><a href="//www.runoob.com/linux/linux-comm-awk.html" target="_blank">awk玩法请参考文档</a><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@lovedan test]# awk '&#123;sum[$1]+=1&#125; END &#123;for(k in sum) print k ":" sum[k]&#125;' a.txt</div><div class="line">hello:4</div><div class="line">dandan:1</div><div class="line">good:3</div><div class="line">world:2</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<h3 id="awk命令"><a href="#awk命令" class="headerlink" title="awk命令"></a>awk命令</h3><p>awk是以文件的一行为处理单位的,awk每接收文件的一行，然后执行相应的命令处理文本<br><a href="//www.runoob.com/linux/linux-comm-awk.html" target="_blank">awk玩法请参考文档</a><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@lovedan test]# awk '&#123;sum[$1]+=1&#125; END &#123;for(k in sum) print k ":" sum[k]&#125;' a.txt</div><div class="line">hello:4</div><div class="line">dandan:1</div><div class="line">good:3</div><div class="line">world:2</div></pre></td></tr></table></figure></p>
 <p>注: 如上结果,每读取一行，得取到那个单词，这是$1,有其它的分隔符则-F等，取具体的$n,<br>    以上用sum数组存储，key是自每行的单词,每读取一行加1，END是最终执行，循环打印内容<br>    单词由次数显示出来，则只要按冒号后的数字倒序排序即可<br>ok,单词及次数已整理出来，只要排序就妥了，<strong>sort</strong>命令走起</p>
 <hr>
 <h3 id="sort命令"><a href="#sort命令" class="headerlink" title="sort命令"></a>sort命令</h3><blockquote>
