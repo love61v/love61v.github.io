@@ -107,7 +107,7 @@
 <meta property="og:url" content="https://love61v.github.io/2017/07/12/awk统计排名单词出现次数/index.html">
 <meta property="og:site_name" content="小仙丹">
 <meta property="og:description" content="命令太多，记不住，组合起来用一把…..示例文件:1234567891011[root@lovedan test]# cat a.txthellogoodworldhellohellogooddandangoodhelloworld 场景/分析: 统计a.txt出现次数前3名的单词 出现次数用awk统计 排名用sort命令排序 取文件前N行用head命令">
-<meta property="og:updated_time" content="2017-07-20T14:54:49.176Z">
+<meta property="og:updated_time" content="2017-07-20T15:11:32.306Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux awk命令统计排名单词出现次数">
 <meta name="twitter:description" content="命令太多，记不住，组合起来用一把…..示例文件:1234567891011[root@lovedan test]# cat a.txthellogoodworldhellohellogooddandangoodhelloworld 场景/分析: 统计a.txt出现次数前3名的单词 出现次数用awk统计 排名用sort命令排序 取文件前N行用head命令">
@@ -415,7 +415,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  730
+                  733
                 </span>
               
 
@@ -487,15 +487,16 @@
 <hr>
 <h3 id="最终结果"><a href="#最终结果" class="headerlink" title="最终结果"></a>最终结果</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[root@lovedan test]# awk '&#123;sum[$1]+=1&#125; END &#123;for(k in sum) print k ":" sum[k]&#125;' a.txt | sort -n -r -k 2 -t ':' | head -n 3</div><div class="line">hello:4</div><div class="line">good:3</div><div class="line">world:2</div></pre></td></tr></table></figure>
 <p>貌似上面都复杂了但awk是个神器，uniq命令也可以而有时会显得局限(毕竟日志中没有这么简单的数据)<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[root@lovedan test]# sort a.txt | uniq -c | sort -nr  -t ' ' -k 1 | head -n 3</div><div class="line">4 hello</div><div class="line">3 good</div><div class="line">2 world</div></pre></td></tr></table></figure></p>
-<h3 id="进入主题"><a href="#进入主题" class="headerlink" title="进入主题"></a>进入主题</h3><p>以上都是小打小闹，请君看下面<br>若有道理面试说有个文件中有1000W行，每行一个单词，现要统单词词频排名前10的查询出来<br>你有哪些方案方法？</p>
+<h3 id="文不对题请见谅，以上都是小打小闹，请君看下面"><a href="#文不对题请见谅，以上都是小打小闹，请君看下面" class="headerlink" title="文不对题请见谅，以上都是小打小闹，请君看下面"></a>文不对题请见谅，以上都是小打小闹，请君看下面</h3><p>若有道理面试说有个文件中有1000W行，每行一个单词，现要统单词词频排名前10的查询出来<br>你有哪些方案方法？</p>
 <ol>
 <li>shell统计如上</li>
 <li><p>读取文件再统计排名前10(如下python)</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># encoding=utf-8</span></div><div class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> defaultdict</div><div class="line"></div><div class="line">words = defaultdict(int)</div><div class="line"><span class="keyword">with</span> open(<span class="string">'/usr/local/test/a.txt'</span>) <span class="keyword">as</span> f:</div><div class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> f:</div><div class="line">        words[line.strip()] += <span class="number">1</span></div><div class="line"></div><div class="line">list = sorted(words.items(), key=<span class="keyword">lambda</span> words: words[<span class="number">1</span>],reverse=<span class="keyword">True</span>)</div><div class="line">print(list[<span class="number">0</span>:<span class="number">10</span>])</div></pre></td></tr></table></figure>
 </li>
-<li><p>若文件大到几个G，数据条数过亿，而且最快最高效率完成目标<br>面试官问你怎么办？答:MapReduce <strong>见【<a href="http://blog.csdn.net/v_july_v/article/details/6279498" target="_blank" rel="external">传送门*大世界^_^</a>】</strong><br>重要的是思维与格局，分而治之，智慧合作</p>
+<li><p>若文件大到几个G，数据条数过亿，而且最快最高效率完成目标<br>面试官问你怎么办？答:MapReduce <strong>见【<a href="http://blog.csdn.net/v_july_v/article/details/6279498" target="_blank" rel="external">传送门*大世界^_^</a>】</strong></p>
 </li>
 </ol>
+<p>重要的是思维与格局，分而治之，智慧合作</p>
 
       
     </div>
@@ -700,7 +701,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#场景-分析-统计a-txt出现次数前3名的单词"><span class="nav-number">1.</span> <span class="nav-text">场景/分析: 统计a.txt出现次数前3名的单词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#awk命令"><span class="nav-number">2.</span> <span class="nav-text">awk命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sort命令"><span class="nav-number">3.</span> <span class="nav-text">sort命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#head命令"><span class="nav-number">4.</span> <span class="nav-text">head命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最终结果"><span class="nav-number">5.</span> <span class="nav-text">最终结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进入主题"><span class="nav-number">6.</span> <span class="nav-text">进入主题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#场景-分析-统计a-txt出现次数前3名的单词"><span class="nav-number">1.</span> <span class="nav-text">场景/分析: 统计a.txt出现次数前3名的单词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#awk命令"><span class="nav-number">2.</span> <span class="nav-text">awk命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sort命令"><span class="nav-number">3.</span> <span class="nav-text">sort命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#head命令"><span class="nav-number">4.</span> <span class="nav-text">head命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最终结果"><span class="nav-number">5.</span> <span class="nav-text">最终结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文不对题请见谅，以上都是小打小闹，请君看下面"><span class="nav-number">6.</span> <span class="nav-text">文不对题请见谅，以上都是小打小闹，请君看下面</span></a></li></ol></div>
             
 
           </div>
