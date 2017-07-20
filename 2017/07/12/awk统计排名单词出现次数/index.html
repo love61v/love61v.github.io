@@ -107,7 +107,7 @@
 <meta property="og:url" content="https://love61v.github.io/2017/07/12/awk统计排名单词出现次数/index.html">
 <meta property="og:site_name" content="小仙丹">
 <meta property="og:description" content="命令太多，记不住，组合起来用一把…..示例文件:1234567891011[root@lovedan test]# cat a.txthellogoodworldhellohellogooddandangoodhelloworld 场景/分析: 统计a.txt出现次数前3名的单词 出现次数用awk统计 排名用sort命令排序 取文件前N行用head命令">
-<meta property="og:updated_time" content="2017-07-20T15:11:32.306Z">
+<meta property="og:updated_time" content="2017-07-20T15:46:10.248Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux awk命令统计排名单词出现次数">
 <meta name="twitter:description" content="命令太多，记不住，组合起来用一把…..示例文件:1234567891011[root@lovedan test]# cat a.txthellogoodworldhellohellogooddandangoodhelloworld 场景/分析: 统计a.txt出现次数前3名的单词 出现次数用awk统计 排名用sort命令排序 取文件前N行用head命令">
@@ -415,7 +415,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  733
+                  732
                 </span>
               
 
@@ -487,7 +487,7 @@
 <hr>
 <h3 id="最终结果"><a href="#最终结果" class="headerlink" title="最终结果"></a>最终结果</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[root@lovedan test]# awk '&#123;sum[$1]+=1&#125; END &#123;for(k in sum) print k ":" sum[k]&#125;' a.txt | sort -n -r -k 2 -t ':' | head -n 3</div><div class="line">hello:4</div><div class="line">good:3</div><div class="line">world:2</div></pre></td></tr></table></figure>
 <p>貌似上面都复杂了但awk是个神器，uniq命令也可以而有时会显得局限(毕竟日志中没有这么简单的数据)<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[root@lovedan test]# sort a.txt | uniq -c | sort -nr  -t ' ' -k 1 | head -n 3</div><div class="line">4 hello</div><div class="line">3 good</div><div class="line">2 world</div></pre></td></tr></table></figure></p>
-<h3 id="文不对题请见谅，以上都是小打小闹，请君看下面"><a href="#文不对题请见谅，以上都是小打小闹，请君看下面" class="headerlink" title="文不对题请见谅，以上都是小打小闹，请君看下面"></a>文不对题请见谅，以上都是小打小闹，请君看下面</h3><p>若有道理面试说有个文件中有1000W行，每行一个单词，现要统单词词频排名前10的查询出来<br>你有哪些方案方法？</p>
+<h3 id="文不对题请见谅，以上都是小打小闹，请君看下面"><a href="#文不对题请见谅，以上都是小打小闹，请君看下面" class="headerlink" title="文不对题请见谅，以上都是小打小闹，请君看下面"></a>文不对题请见谅，以上都是小打小闹，请君看下面</h3><p>若有道面试说有个文件中有1000W行，每行一个单词，现要统单词词频排名前10的查询出来<br>你有哪些方案方法？</p>
 <ol>
 <li>shell统计如上</li>
 <li><p>读取文件再统计排名前10(如下python)</p>
