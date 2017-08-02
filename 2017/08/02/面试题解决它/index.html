@@ -84,7 +84,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="java,面试题," />
 
 
 
@@ -100,15 +100,21 @@
 
 
 
-<meta name="description" content="原来你是小幸运">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小仙丹">
-<meta property="og:url" content="https://love61v.github.io/tags/奇技淫巧/index.html">
+<meta name="description" content="1.库分表id如何生成的，怎样保证唯一? 2.线上内存溢出怎么排查解决的? 3.分布式锁有哪些实现方式 zookeeper实现创建临时有序节点，取出最小的一个节点且是自己创建的则获得锁,删除节点释放锁,设置超时时间  redis实现setnx key value 命令表示当且仅当key不存在时才设置，返回结果1,否则返回0，且要设置超时时间  参见官网说明及锁的问题与解决方案 1234567red">
+<meta name="keywords" content="java,面试题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试题解决它">
+<meta property="og:url" content="https://love61v.github.io/2017/08/02/面试题解决它/index.html">
 <meta property="og:site_name" content="小仙丹">
-<meta property="og:description" content="原来你是小幸运">
+<meta property="og:description" content="1.库分表id如何生成的，怎样保证唯一? 2.线上内存溢出怎么排查解决的? 3.分布式锁有哪些实现方式 zookeeper实现创建临时有序节点，取出最小的一个节点且是自己创建的则获得锁,删除节点释放锁,设置超时时间  redis实现setnx key value 命令表示当且仅当key不存在时才设置，返回结果1,否则返回0，且要设置超时时间  参见官网说明及锁的问题与解决方案 1234567red">
+<meta property="og:image" content="https://love61v.github.io/2017/08/02/面试题解决它/snakeflow.jpg">
+<meta property="og:image" content="https://love61v.github.io/2017/08/02/面试题解决它/mem.png">
+<meta property="og:image" content="https://love61v.github.io/2017/08/02/面试题解决它/zkLock.png">
+<meta property="og:updated_time" content="2017-08-02T10:31:57.175Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小仙丹">
-<meta name="twitter:description" content="原来你是小幸运">
+<meta name="twitter:title" content="面试题解决它">
+<meta name="twitter:description" content="1.库分表id如何生成的，怎样保证唯一? 2.线上内存溢出怎么排查解决的? 3.分布式锁有哪些实现方式 zookeeper实现创建临时有序节点，取出最小的一个节点且是自己创建的则获得锁,删除节点释放锁,设置超时时间  redis实现setnx key value 命令表示当且仅当key不存在时才设置，返回结果1,否则返回0，且要设置超时时间  参见官网说明及锁的问题与解决方案 1234567red">
+<meta name="twitter:image" content="https://love61v.github.io/2017/08/02/面试题解决它/snakeflow.jpg">
 
 
 
@@ -136,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="https://love61v.github.io/tags/奇技淫巧/"/>
+  <link rel="canonical" href="https://love61v.github.io/2017/08/02/面试题解决它/"/>
 
 
 
 
 
-  <title>标签: 奇技淫巧 | 小仙丹</title>
+  <title>面试题解决它 | 小仙丹</title>
   
 
 
@@ -167,7 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -309,72 +315,225 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2>奇技淫巧<small>标签</small>
-      </h2>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2017/07/14/maven生成表实体及dao/" itemprop="url">
-              
-                <span itemprop="name">mybatis-generator maven插件生成实体及dao代码</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-14T16:04:09+08:00"
-              content="2017-07-14 16:04:09" >
-          07-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2017/07/14/springloaded热部署/" itemprop="url">
-              
-                <span itemprop="name">springloaded热部署</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-14T12:28:49+08:00"
-              content="2017-07-14 12:28:49" >
-          07-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </div>
 
   
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://love61v.github.io/2017/08/02/面试题解决它/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="missdan的学生">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小仙丹">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">面试题解决它</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-02T14:19:36+08:00">
+                2017-08-02 14:19:36
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/大厂面试题/" itemprop="url" rel="index">
+                    <span itemprop="name">大厂面试题</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/08/02/面试题解决它/" class="leancloud_visitors" data-flag-title="面试题解决它">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  1,075
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="1-库分表id如何生成的，怎样保证唯一"><a href="#1-库分表id如何生成的，怎样保证唯一" class="headerlink" title="1.库分表id如何生成的，怎样保证唯一?"></a>1.库分表id如何生成的，怎样保证唯一?</h3><p><img src="/2017/08/02/面试题解决它/snakeflow.jpg" alt=""></p>
+<h3 id="2-线上内存溢出怎么排查解决的"><a href="#2-线上内存溢出怎么排查解决的" class="headerlink" title="2.线上内存溢出怎么排查解决的?"></a>2.线上内存溢出怎么排查解决的?</h3><p><img src="/2017/08/02/面试题解决它/mem.png" alt=""></p>
+<h3 id="3-分布式锁有哪些实现方式"><a href="#3-分布式锁有哪些实现方式" class="headerlink" title="3.分布式锁有哪些实现方式"></a>3.分布式锁有哪些实现方式</h3><ul>
+<li><p><strong>zookeeper实现</strong><br>创建临时有序节点，取出最小的一个节点且是自己创建的则获得锁,删除节点释放锁,设置超时时间<br><img src="/2017/08/02/面试题解决它/zkLock.png" alt=""></p>
+</li>
+<li><p><strong>redis实现</strong><br>setnx key value 命令表示当且仅当key不存在时才设置，返回结果1,否则返回0，<br>且要设置超时时间  <a href="https://redis.io/commands/setnx" target="_blank" rel="external"><strong>参见官网说明</strong></a>及锁的问题与解决方案</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">redis&gt; SETNX mykey &quot;Hello&quot;</div><div class="line">(integer) 1</div><div class="line">redis&gt; SETNX mykey &quot;World&quot;</div><div class="line">(integer) 0</div><div class="line">redis&gt; GET mykey</div><div class="line">&quot;Hello&quot;</div><div class="line">redis&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">解决死锁</div><div class="line"></div><div class="line">考虑一种情况，如果进程获得锁后，断开了与 Redis 的连接（可能是进程挂掉，或者网络中断），如果没有有效的释放锁的机制，那么其他进程都会处于一直等待的状态，即出现“死锁”。</div><div class="line">上面在使用 SETNX 获得锁时，我们将键 lock.foo 的值设置为锁的有效时间，进程获得锁后，其他进程还会不断的检测锁是否已超时，如果超时，那么等待的进程也将有机会获得锁。</div><div class="line">然而，锁超时时，我们不能简单地使用 DEL 命令删除键 lock.foo 以释放锁。考虑以下情况，进程C1已经首先获得了锁 lock.foo，然后进程C1挂掉了。进程C2，C3正在不断地检测锁是否已释放或者已超时，执行流程如下：</div><div class="line"></div><div class="line">C2和C3进程读取键 lock.foo 的值，检测锁是否已超时（通过比较当前时间和键 lock.foo 的值来判断是否超时）</div><div class="line">C2和C3进程发现锁 lock.foo 已超时</div><div class="line">C2执行 DEL lock.foo命令</div><div class="line">C2执行 SETNX lock.foo命令，并返回1，即C2获得锁</div><div class="line">C3执行 DEL lock.foo命令将C2刚刚设置的键 lock.foo 删除（这步是由于C3刚才已检测到锁已超时）</div><div class="line">C3执行 SETNX lock.foo命令，并返回1，即C3获得锁</div><div class="line">C2和C3同时获得了锁</div><div class="line">从上面的情况可以得知，在检测到锁超时后，进程不能直接简单地执行 DEL 删除键的操作以获得锁。</div><div class="line"></div><div class="line">为了解决上述算法可能出现的多个进程同时获得锁的问题，我们再来看以下的算法。</div><div class="line">我们同样假设进程C1已经首先获得了锁 lock.foo，然后进程C1挂掉了。接下来的情况：</div><div class="line"></div><div class="line">进程C4执行 SETNX lock.foo 以尝试获取锁</div><div class="line">由于进程C1已获得了锁，所以C4执行 SETNX lock.foo 返回0，即获取锁失败</div><div class="line">C4执行 GET lock.foo 来检测锁是否已超时，如果没超时，则等待一段时间，再次检测</div><div class="line">如果C4检测到锁已超时，即当前的时间大于键 lock.foo 的值，C4会执行以下操作</div><div class="line"></div><div class="line">        GETSET lock.foo &lt;current Unix timestamC + lock timeout + 1&gt;</div><div class="line"></div><div class="line">由于 GETSET 操作在设置键的值的同时，还会返回键的旧值，通过比较键 lock.foo 的旧值是否小于当前时间，可以判断进程是否已获得锁</div><div class="line">假如另一个进程C5也检测到锁已超时，并在C4之前执行了 GETSET 操作，那么C4的 GETSET 操作返回的是一个大于当前时间的时间戳，这样C4就不会获得锁而继续等待。注意到，即使C4接下来将键 lock.foo 的值设置了比C5设置的更大的值也没影响。</div><div class="line">另外，值得注意的是，在进程释放锁，即执行 DEL lock.foo 操作前，需要先判断锁是否已超时。如果锁已超时，那么锁可能已由其他进程获得，这时直接执行 DEL lock.foo 操作会导致把其他进程已获得的锁释放掉。</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>memcached实现</strong><br>实现原理：memcached带有add函数，利用add函数的特性即可实现分布式锁<br>add会添加第一个到达的值，并返回true，后续的添加则都会返回false<br>1、memcached采用列入LRU置换策略，内存不够可能导致缓存中的锁信息丢失<br>2、memcached<strong>无法持久化</strong>，一旦重启，将导致信息丢失<br>3、加上<strong>超时时间避免死锁</strong></p>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/面试题/" rel="tag"># 面试题</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/16/Listener模式/" rel="next" title="Listener模式">
+                <i class="fa fa-chevron-left"></i> Listener模式
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -382,6 +541,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
+
 
         </div>
         
@@ -402,8 +567,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -483,6 +657,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-库分表id如何生成的，怎样保证唯一"><span class="nav-number">1.</span> <span class="nav-text">1.库分表id如何生成的，怎样保证唯一?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-线上内存溢出怎么排查解决的"><span class="nav-number">2.</span> <span class="nav-text">2.线上内存溢出怎么排查解决的?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-分布式锁有哪些实现方式"><span class="nav-number">3.</span> <span class="nav-text">3.分布式锁有哪些实现方式</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -592,10 +782,10 @@
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 
