@@ -100,20 +100,20 @@
 
 
 
-<meta name="description" content="1.库分表id如何生成的，怎样保证唯一? 2.线上内存溢出怎么排查解决的? 3.分布式锁有哪些实现方式 zookeeper实现创建临时有序节点，取出最小的一个节点且是自己创建的则获得锁,删除节点释放锁,设置超时时间  redis实现setnx key value 命令表示当且仅当key不存在时才设置，返回结果1,否则返回0，且要设置超时时间  参见官网说明及锁的问题与解决方案 1234567red">
+<meta name="description" content="1.库分表id如何生成的，怎样保证全局唯一?推特snakeflow算法,什么UUID，数据生成好像用得少 2.线上内存溢出怎么排查解决的? 3.分布式锁有哪些实现方式 zookeeper实现创建临时有序节点，取出最小的一个节点且是自己创建的则获得锁,删除节点释放锁,设置超时时间  redis实现setnx key value 命令表示当且仅当key不存在时才设置，返回结果1,否则返回0，且要设置超">
 <meta name="keywords" content="java,面试题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试题解决它">
 <meta property="og:url" content="https://love61v.github.io/2017/08/02/面试题解决它/index.html">
 <meta property="og:site_name" content="小仙丹">
-<meta property="og:description" content="1.库分表id如何生成的，怎样保证唯一? 2.线上内存溢出怎么排查解决的? 3.分布式锁有哪些实现方式 zookeeper实现创建临时有序节点，取出最小的一个节点且是自己创建的则获得锁,删除节点释放锁,设置超时时间  redis实现setnx key value 命令表示当且仅当key不存在时才设置，返回结果1,否则返回0，且要设置超时时间  参见官网说明及锁的问题与解决方案 1234567red">
+<meta property="og:description" content="1.库分表id如何生成的，怎样保证全局唯一?推特snakeflow算法,什么UUID，数据生成好像用得少 2.线上内存溢出怎么排查解决的? 3.分布式锁有哪些实现方式 zookeeper实现创建临时有序节点，取出最小的一个节点且是自己创建的则获得锁,删除节点释放锁,设置超时时间  redis实现setnx key value 命令表示当且仅当key不存在时才设置，返回结果1,否则返回0，且要设置超">
 <meta property="og:image" content="https://love61v.github.io/2017/08/02/面试题解决它/snakeflow.jpg">
 <meta property="og:image" content="https://love61v.github.io/2017/08/02/面试题解决它/mem.png">
 <meta property="og:image" content="https://love61v.github.io/2017/08/02/面试题解决它/zkLock.png">
-<meta property="og:updated_time" content="2017-08-02T10:31:57.175Z">
+<meta property="og:updated_time" content="2017-08-03T10:25:42.625Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试题解决它">
-<meta name="twitter:description" content="1.库分表id如何生成的，怎样保证唯一? 2.线上内存溢出怎么排查解决的? 3.分布式锁有哪些实现方式 zookeeper实现创建临时有序节点，取出最小的一个节点且是自己创建的则获得锁,删除节点释放锁,设置超时时间  redis实现setnx key value 命令表示当且仅当key不存在时才设置，返回结果1,否则返回0，且要设置超时时间  参见官网说明及锁的问题与解决方案 1234567red">
+<meta name="twitter:description" content="1.库分表id如何生成的，怎样保证全局唯一?推特snakeflow算法,什么UUID，数据生成好像用得少 2.线上内存溢出怎么排查解决的? 3.分布式锁有哪些实现方式 zookeeper实现创建临时有序节点，取出最小的一个节点且是自己创建的则获得锁,删除节点释放锁,设置超时时间  redis实现setnx key value 命令表示当且仅当key不存在时才设置，返回结果1,否则返回0，且要设置超">
 <meta name="twitter:image" content="https://love61v.github.io/2017/08/02/面试题解决它/snakeflow.jpg">
 
 
@@ -419,7 +419,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,075
+                  1,298
                 </span>
               
 
@@ -435,7 +435,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  4
+                  5
                 </span>
               
             </div>
@@ -453,7 +453,7 @@
       
 
       
-        <h3 id="1-库分表id如何生成的，怎样保证唯一"><a href="#1-库分表id如何生成的，怎样保证唯一" class="headerlink" title="1.库分表id如何生成的，怎样保证唯一?"></a>1.库分表id如何生成的，怎样保证唯一?</h3><p><img src="/2017/08/02/面试题解决它/snakeflow.jpg" alt=""></p>
+        <h3 id="1-库分表id如何生成的，怎样保证全局唯一"><a href="#1-库分表id如何生成的，怎样保证全局唯一" class="headerlink" title="1.库分表id如何生成的，怎样保证全局唯一?"></a>1.库分表id如何生成的，怎样保证全局唯一?</h3><p>推特snakeflow算法,什么UUID，数据生成好像用得少<br><img src="/2017/08/02/面试题解决它/snakeflow.jpg" alt=""></p>
 <h3 id="2-线上内存溢出怎么排查解决的"><a href="#2-线上内存溢出怎么排查解决的" class="headerlink" title="2.线上内存溢出怎么排查解决的?"></a>2.线上内存溢出怎么排查解决的?</h3><p><img src="/2017/08/02/面试题解决它/mem.png" alt=""></p>
 <h3 id="3-分布式锁有哪些实现方式"><a href="#3-分布式锁有哪些实现方式" class="headerlink" title="3.分布式锁有哪些实现方式"></a>3.分布式锁有哪些实现方式</h3><ul>
 <li><p><strong>zookeeper实现</strong><br>创建临时有序节点，取出最小的一个节点且是自己创建的则获得锁,删除节点释放锁,设置超时时间<br><img src="/2017/08/02/面试题解决它/zkLock.png" alt=""></p>
@@ -465,6 +465,34 @@
 <li><p><strong>memcached实现</strong><br>实现原理：memcached带有add函数，利用add函数的特性即可实现分布式锁<br>add会添加第一个到达的值，并返回true，后续的添加则都会返回false<br>1、memcached采用列入LRU置换策略，内存不够可能导致缓存中的锁信息丢失<br>2、memcached<strong>无法持久化</strong>，一旦重启，将导致信息丢失<br>3、加上<strong>超时时间避免死锁</strong></p>
 </li>
 </ul>
+<h3 id="3-jdk1-8的特性"><a href="#3-jdk1-8的特性" class="headerlink" title="3.jdk1.8的特性"></a>3.jdk1.8的特性</h3><ol>
+<li>接口的默认方法</li>
+<li>Lambda 表达式</li>
+<li>函数式接口</li>
+<li>方法与构造函数引用</li>
+<li>Lambda 作用域</li>
+<li>访问局部变量</li>
+<li>访问对象字段与静态变量</li>
+<li>Annotation 多重注解</li>
+<li>日期API</li>
+<li>访问接口的默认方法</li>
+<li>总有种鸡肋的感觉，然而面试必问</li>
+</ol>
+<h3 id="4-一致性hash"><a href="#4-一致性hash" class="headerlink" title="4.一致性hash"></a>4.一致性hash</h3><ul>
+<li><a href="http://blog.csdn.net/cywosp/article/details/23397179" target="_blank" rel="external">读三遍^__^</a></li>
+</ul>
+<h3 id="5-算法"><a href="#5-算法" class="headerlink" title="5.算法"></a>5.算法</h3><ul>
+<li>心病,永远都准备不完</li>
+</ul>
+<h3 id="6-分库分表原理，方案"><a href="#6-分库分表原理，方案" class="headerlink" title="6.分库分表原理，方案"></a>6.分库分表原理，方案</h3><ul>
+<li>当当sharding-jdbc, 阿里TDDL,还有Cobar、myCat; </li>
+<li>少有机会搞这玩意,实战少<br></li>
+<li>还是再读读书 <strong>大型分布式网站架构设计与实践</strong></li>
+</ul>
+<h3 id="7-AQS与CAS"><a href="#7-AQS与CAS" class="headerlink" title="7.AQS与CAS"></a>7.AQS与CAS</h3><ul>
+<li>先啃啃书 <strong>Java并发编程的艺术</strong> 再后补</li>
+</ul>
+<h3 id="8-来者可追"><a href="#8-来者可追" class="headerlink" title="8. 来者可追"></a>8. 来者可追</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span>(才华 &lt; 野心):</div><div class="line">    print(宁静致远，厚积薄发)</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -667,7 +695,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-库分表id如何生成的，怎样保证唯一"><span class="nav-number">1.</span> <span class="nav-text">1.库分表id如何生成的，怎样保证唯一?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-线上内存溢出怎么排查解决的"><span class="nav-number">2.</span> <span class="nav-text">2.线上内存溢出怎么排查解决的?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-分布式锁有哪些实现方式"><span class="nav-number">3.</span> <span class="nav-text">3.分布式锁有哪些实现方式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-库分表id如何生成的，怎样保证全局唯一"><span class="nav-number">1.</span> <span class="nav-text">1.库分表id如何生成的，怎样保证全局唯一?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-线上内存溢出怎么排查解决的"><span class="nav-number">2.</span> <span class="nav-text">2.线上内存溢出怎么排查解决的?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-分布式锁有哪些实现方式"><span class="nav-number">3.</span> <span class="nav-text">3.分布式锁有哪些实现方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-jdk1-8的特性"><span class="nav-number">4.</span> <span class="nav-text">3.jdk1.8的特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-一致性hash"><span class="nav-number">5.</span> <span class="nav-text">4.一致性hash</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-算法"><span class="nav-number">6.</span> <span class="nav-text">5.算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-分库分表原理，方案"><span class="nav-number">7.</span> <span class="nav-text">6.分库分表原理，方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-AQS与CAS"><span class="nav-number">8.</span> <span class="nav-text">7.AQS与CAS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-来者可追"><span class="nav-number">9.</span> <span class="nav-text">8. 来者可追</span></a></li></ol></div>
             
 
           </div>
